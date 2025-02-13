@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript Operadores</title>
+</head>
+
+<body>
+    <script type="text/JavaScript">
+        let numero = prompt("dime un numero")
+        let numero1 = parseInt(prompt("dime un numero para sumar"))
+        let numero2 = parseInt(prompt("dime un numero para sumar"))
+        if (numero % 7 == 0) {
+            alert("es multiplo de 7");
+        } else {
+            alert("no es multiplo de 7");
+        }
+         function parImpar(num){
+            if (num%2==0){
+                return "par";
+            }else{
+                return "impar";
+            }
+         }
+        function diceImpar(num) {
+            let numero3 = parseInt(prompt("Dime un numero"));
+            let resultado = parImpar(numero3);
+            alert("El numero " + numero3 + " es " + resultado);
+        }
+        function SumarNumeros(num) {
+            let suma = numero1 + numero2;
+            alert("la suma de " + numero1 + " + " + numero2 + " es " + suma);
+        }
+
+    </script>
+    <button onclick="SumarNumeros()"> sumar numeros</button>
+    <button onclick="diceImpar()"> El primer numero es par?</button>
+</body>
+
+</html>

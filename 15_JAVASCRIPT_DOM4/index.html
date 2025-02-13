@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejericio con visibility:hidden</title>
+</head>
+
+<body>
+    <h1>Provincia de envío</h1>
+    <form>
+        <label for="pais">País: </label>
+        <select id="pais" name="pais" onchange="muestraProvincia()">
+            <option value="noseleccionado">Elija destino</option>
+            <option value="esp">España</option>
+            <option value="noesp">Fuera de España</option>
+        </select>
+        
+        
+        <select id="provincia" name="provincia" style="visibility: hidden">
+            <option value="nsnc">Elija provincia</option>
+            <option value="cr">Ciudad Real</option>
+            <option value="ab">Albacete</option>
+            <option value="se">Sevilla</option>
+            <option value="ma">Madrid</option>
+            <option value="ba">Barcelona</option>
+            <option value="lu">Lugo</option>
+        </select>
+    </form>
+
+    <script>
+        function muestraProvincia() {
+            let pais = document.getElementById("pais");
+            let provincia = document.getElementById("provincia");
+            
+            if (pais.value == "esp") {
+                provincia.style.visibility = "visible";
+            }
+            if (pais.value != "esp") {
+                provincia.style.visibility = "hidden";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

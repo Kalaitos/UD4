@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript y DOM #3</title>
+    <style type="text/css">
+        .importante {
+            background-color: red;
+            color: yellow;
+            font-size: 30px
+        }
+    </style>
+    <script type="text/JavaScript">
+        var edad = prompt ("dime tu edad");
+        if (edad>18){
+             var nombre=prompt  ("dime tu nombre");
+             document.write("<h1>Bienvenido, "+ nombre+"</h1>" )   
+        }else {
+            document.write("<h1>Acceso no autorizado</h1>" )
+        }
+        function aplicaClase() {
+            titulo.getElementById("titulo").className="importante"
+            
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 id="titulo">Titulo inicial</h1>
+    <button onclick="aplicaClase()">Aplicar clase</button>
+</body>
+
+</html>

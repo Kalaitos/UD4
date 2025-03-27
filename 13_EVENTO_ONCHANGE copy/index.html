@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector productos</title>
+    <script type="text/javascript">
+        function cambiaImagen() {
+            var provincia = document.getElementById("producto");
+            var imagen = document.getElementById("imagen");
+            imagen.style.visibility = "visible";
+            if (provincia.value == "po") {
+                imagen.src = "images/po.jpg"
+            }
+            if (provincia.value == "sm") {
+                imagen.src = "images/sm.jpg"
+            }
+            if (provincia.value == "ta") {
+                imagen.src = "images/ta.jpg"
+            }
+            } if (provincia.value == "noseleccionado") {
+                imagen.src = ""
+                imagen.style.visibility = "hidden"
+            }
+        
+
+    </script>
+</head>
+
+<body>
+    <h1>Castilla-La Mancha</h1>
+    <form>
+
+        <select id="producto" name="provincia" onchange="cambiaImagen()">
+            <option value="noseleccionado">Elija producto</option>
+            <option value="po">Portatil</option>
+            <option value="sm">Sobremesa</option>
+            <option value="ta">Tablet</option>
+        </select>
+        <br>
+        <img style="visibility:hidden" id="imagen" src="" width="400" height="400">
+    </form>
+
+
+
+</body>
+
+</html>

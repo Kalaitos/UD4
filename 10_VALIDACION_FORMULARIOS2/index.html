@@ -16,6 +16,7 @@
 
         #aviso {
             color: red;
+            text-align: center;
         }
 
         #capaformulario {
@@ -33,6 +34,8 @@
         }
 
         input {
+            width: 70%;
+            height: 25px;
             border: 1px solid white;
             border-radius: 4px;
         }
@@ -44,13 +47,13 @@
 
             var nombre = document.getElementById("nombre");
             if (nombre.value.length == 0) {
-                aviso.innerHTML = "**El nombre no puede ser vacío**";
+                aviso.innerHTML = "**El nombre no puede estar vacío**";
                 nombre.focus();
                 return false;
             }
 
             var fecha = document.getElementById("fecha");
-            //alert(fecha.value);
+            alert(fecha.value);
             if (fecha.value.length == 0) {
                 aviso.innerHTML = "**Debe seleccionar una fecha**";
                 fecha.focus();
@@ -68,18 +71,21 @@
 
 <body>
     <h1 id="titulo">Formulario de Inscripción</h1>
-    <h5 id="aviso"></h5>
+
     <div id="capaformulario">
         <form action="procesa.php" onsubmit="return validarFormulario()">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre"><br>
+
             <label for="fecha">Fecha de inscripcion</label>
             <input type="date" name="fecha" id="fecha">
-            <div style="text-align: center; margin-top: 20px;"> <input type="submit" id="submit">
 
-
+            <div style="text-align: center; margin-top: 20px;">
+                <input type="submit" name="submit" id="submit">
             </div>
+            <h6 id="aviso"></h6>
         </form>
+
 </body>
 
 </html>
